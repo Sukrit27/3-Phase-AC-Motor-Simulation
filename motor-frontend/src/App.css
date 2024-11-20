@@ -150,3 +150,21 @@ h1 {
   width: 10%; /* Spaced evenly */
   white-space: nowrap;
 }
+
+
+/* Style for the image gallery container */
+.image-gallery {
+  display: flex; /* To align the images in a row */
+  flex-wrap: wrap; /* Allows the images to wrap onto a new line if needed */
+  justify-content: center; /* Centers the images horizontally */
+  gap: 10px; /* Adds space between images */
+  margin-top: 20px;
+}
+
+/* Style for each image */
+.image-gallery img {
+  max-width: 300px; /* Limits the width of each image */
+  max-height: 250px; /* Limits the height of each image */
+  object-fit: cover; /* Ensures images retain their aspect ratio */
+  border-radius: 5px; /* Optional: adds rounded corners to the images */
+}

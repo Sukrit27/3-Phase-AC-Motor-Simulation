@@ -1,25 +1,27 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
 
+
 function App() {
   const [rpm, setRpm] = useState(0);
   const [temperature, setTemperature] = useState(null);
   const [images, setImages] = useState([]);
   
-  const rpmSteps = [0, 2000, 2100, 2200, 2300, 2400, 2500, 2600, 2700, 2800, 3000];
+  const rpmSteps = [0, 1000, 2000, 2100, 2200, 2300, 2400, 2500, 2600, 2800, 3000];
 
   const rpmData = {
-    0: { temperature: 25, images: ["url1.jpg"] },
-    2000: { temperature: 637.6853, images: ["url2.jpg", "url3.jpg"] },
-    2100: { temperature: 649.0876, images: ["url4.jpg"] },
-    2200: { temperature: 664.5388, images: ["url5.jpg"] },
-    2300: { temperature: 685.4056, images: ["url6.jpg"] },
-    2400: { temperature: 703.2339, images: ["url7.jpg"] },
-    2500: { temperature: 714.6644, images: ["url8.jpg"] },
-    2600: { temperature: 731.3327, images: ["url9.jpg"] },
-    2700: { temperature: 65, images: ["url10.jpg"] },
-    2800: { temperature: 772.2987, images: ["url11.jpg"] },
-    3000: { temperature: 75, images: ["url12.jpg"] },
+    0: { temperature: 0, images: ["url1.jpg"] },
+    1000: { temperature: 505.5907, images: ["image/1000heat.jpg", "image/1000temp.jpg"] },
+    2000: { temperature: 637.6853, images: ["image/2000heat.jpg", "image/2000temp.jpg"] },
+    2100: { temperature: 649.0876, images: ["image/2100heat.jpg", "image/2100temp.jpg"] },
+    2200: { temperature: 664.5388, images: ["image/2200heat.jpg", "image/2200temp.jpg"] },
+    2300: { temperature: 685.4056, images: ["image/2300heat.jpg", "image/2300temp.jpg"] },
+    2400: { temperature: 703.2339, images: ["image/2400heat.jpg", "image/2400temp.jpg"] },
+    2500: { temperature: 714.6644, images: ["image/2500heat.jpg", "image/2500temp.jpg"] },
+    2600: { temperature: 731.3327, images: ["image/2600heat.jpg", "image/2600temp.jpg"] },
+    // 2700: { temperature: 65, images: ["url10.jpg"] },
+    2800: { temperature: 772.2987, images: ["image/2800heat.jpg", "image/2800temp.jpg"] },
+    3000: { temperature: 75, images: ["image/3000heat.jpg", "image/3000temp.jpg"] },
   };
 
   useEffect(() => {
